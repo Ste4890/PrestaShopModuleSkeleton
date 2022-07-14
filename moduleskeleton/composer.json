@@ -1,0 +1,19 @@
+{
+    "name": "stefanopelagotti/moduleskeleton",
+    "description": "Generic module skeleton for PrestaShop. This module has a pre made setup to speed up development",
+    "require": {
+        "php": ">=7.2.0",
+        "monolog/monolog": "^2.1",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "StefanoPelagotti\\Module\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+}

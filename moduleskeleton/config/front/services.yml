@@ -1,0 +1,5 @@
+#This is used in order to have access to Symfony services in the frontend
+#maybe a better practice would be to include only services that are really used in the fronted :^ )
+
+imports:
+  - { resource: ../services.yml }

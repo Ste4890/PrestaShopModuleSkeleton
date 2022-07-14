@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    public: true
+# Service declaration usually follows this pattern:
+#  namespace.service_name:
+#    class: 'Namespace\NameOfClass'
+#    arguments:
+#      - '@namespace.other_service_name'
+
+
+

@@ -1,0 +1,10 @@
+#Basic route structure
+# legacy controller and link are useful to generate a sidebar link
+#unique_route_name:
+#  path: path/from/backoffice
+#  methods: [GET]
+#  defaults:
+#    _controller: 'StefanoPelagotti\Namespace\CustomClass::customMethod'
+#    _legacy_controller: NamedController
+#    _legacy_link: NamedController
+
