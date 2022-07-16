@@ -1,4 +1,4 @@
-#PrestaShop Module Skeleton
+# PrestaShop Module Skeleton
 
 
 This is a basic module skeleton for Prestashop; it is a collection of boilerplate code that
