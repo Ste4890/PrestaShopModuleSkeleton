@@ -4,7 +4,7 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 /**
- * prestashop is not happy during install if autoloader is not included. Move in install method?
+ * PrestaShop is not happy during install if autoloader is not included. Move in install method?
  */
 include_once _PS_MODULE_DIR_ . '/moduleskeleton/vendor/autoload.php';
 
@@ -49,7 +49,7 @@ class ModuleSkeleton extends PaymentModule {
         $this->displayName = $this->l('Module Skeleton');
         $this->description = $this->l('Questo è un modulo da usare come template');
 
-        $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
+        $this->confirmUninstall = $this->l('Sei sicuro di voler disinstallare il modulo?');
 
 
     }
@@ -101,7 +101,8 @@ class ModuleSkeleton extends PaymentModule {
                 [
                     'type' => 'text',
                     'label' => $this->l('Input di esempio'),
-                    'name' => $this->config_form_name . '[random_key_name]',
+                    'name' => $this->config_form_name . '[random_key_name]', //add here the key name used for this particular setting. The key will
+                    // be stored in the settings object
                     'size' => 50,
                     'required' => true,
                     'class' => 'col-lg-2',
@@ -195,6 +196,13 @@ class ModuleSkeleton extends PaymentModule {
         $this->context->controller->addCSS($this->_path . '/views/css/back.css');
     }
     //fixme: move logic into its own class
+
+    /**
+     * This hook is used to add custom payment options
+     * @param $params
+     *
+     * @return array
+     */
     public function hookPaymentOptions($params) {
         if (!$this->active) {
             return [];
@@ -212,7 +220,7 @@ class ModuleSkeleton extends PaymentModule {
 
     public const TAB_TO_INSTALL = [
         [
-            'controller' => 'ResellersController',
+            'controller' => 'NamedController',
             'label' => 'Label per il link',
             'parent_classname' => 'IMPROVE',
 
