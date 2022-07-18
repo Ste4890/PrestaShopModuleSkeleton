@@ -22,8 +22,17 @@ The ``examples`` folder contains some practical file examples mostly inspired fr
 module.
 
 
+## Considerations
 
-Todo:
+Here are some of the reasoning behind choices made for this project. I feel that sometimes PrestaShop native classes and common patterns lead to a 
+worse overall develompent experience. My choices are obviously opinionated, but I tried to document them when possible, and I am always open to 
+reconsider them.
+
+### Setting Class 
+Why not directly use PrestaShop native ``Configuration`` class, and instead create a wrapper on top of it?
+
+
+## Todo:
 - add examples
 - add unit tests
 

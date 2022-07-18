@@ -158,7 +158,7 @@ class ModuleSkeleton extends PaymentModule {
         $submittedValues = Tools::getValue($this->config_form_name);
 
         if (empty($submittedValues['password'])) {
-            // this is due in order to not have to re insert the password every time
+            //This is due in order to not have to re insert the password every time.
             //PrestaShop itself uses this pattern somewhere
             unset($submittedValues['password']);
 
@@ -195,11 +195,13 @@ class ModuleSkeleton extends PaymentModule {
         $this->context->controller->addJS($this->_path . '/views/js/back.js');
         $this->context->controller->addCSS($this->_path . '/views/css/back.css');
     }
-    //fixme: move logic into its own class
 
     /**
      * This hook is used to add custom payment options
+     *
      * @param $params
+     *
+     * fixme: move logic into its own class
      *
      * @return array
      */
@@ -224,7 +226,7 @@ class ModuleSkeleton extends PaymentModule {
             'label' => 'Label per il link',
             'parent_classname' => 'IMPROVE',
 
-        ]
+        ],
     ];
 
     private function installTab() {
